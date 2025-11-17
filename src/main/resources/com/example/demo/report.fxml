@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" styleClass="main-container" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.ReportController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="800.0" prefWidth="1000.0" spacing="20" styleClass="content-panel">
+            <padding>
+                <Insets bottom="32" left="32" right="32" top="32" />
+            </padding>
+            <children>
+                <Label styleClass="title-label" text="Sales Report">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+                <TableView fx:id="salesTable" prefHeight="627.0" prefWidth="936.0" styleClass="table-view">
+                    <columns>
+                        <TableColumn fx:id="productColumn" prefWidth="207.0" text="Product" />
+                  <TableColumn fx:id="categoryColumn" prefWidth="187.0" text="Category" />
+                        <TableColumn fx:id="quantityColumn" prefWidth="151.0" text="Quantity" />
+                        <TableColumn fx:id="priceColumn" prefWidth="177.0" text="Profit" />
+                        <TableColumn fx:id="dateColumn" prefWidth="212.0" text="Date" />
+                    </columns>
+                </TableView>
+                <HBox alignment="CENTER" prefHeight="40.0" prefWidth="652.0" spacing="20">
+                    <Button fx:id="generateReportButton" mnemonicParsing="false" onAction="#onGenerateReport" prefHeight="25.0" prefWidth="140.0" styleClass="button-blue" stylesheets="@styles.css" text="Generate Report" />
+                    <Button onAction="#onBack" prefHeight="36.0" prefWidth="137.0" styleClass="button-red" stylesheets="@styles.css" text="Back" />
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</VBox>

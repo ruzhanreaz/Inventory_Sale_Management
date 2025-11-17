@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane prefHeight="800.0" prefWidth="1000.0" styleClass="main-container" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.ProductController">
+    <VBox alignment="TOP_CENTER" spacing="16.0">
+        <padding>
+            <Insets bottom="24" left="32" right="32" top="24" />
+        </padding>
+        <Label styleClass="title-label" text="Admin Product List">
+            <font>
+                <Font size="20" />
+            </font>
+        </Label>
+        <HBox alignment="CENTER" prefHeight="17.0" prefWidth="391.0">
+            <children>
+                <TextField fx:id="searchField" prefHeight="25.0" prefWidth="295.0" promptText="Search by ID/Name/Category" styleClass="text-field" />
+                <Button fx:id="searchButton" onAction="#handleSearch" prefHeight="32.0" prefWidth="120.0" styleClass="button-blue" stylesheets="@styles.css" text="Search" />
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" spacing="10.0">
+            <children>
+                <VBox prefHeight="14.0" prefWidth="100.0">
+                    <children>
+                        <Label styleClass="field-label" text="Category" />
+                        <TextField fx:id="categoryField" prefWidth="120.0" promptText="Category" styleClass="text-field" />
+                    </children>
+                </VBox>
+                <VBox>
+                    <children>
+                        <Label styleClass="field-label" text="Product Name" />
+                        <TextField fx:id="nameField" prefWidth="150.0" promptText="Product Name" styleClass="text-field" />
+                    </children>
+                </VBox>
+                <VBox>
+                    <children>
+                        <Label styleClass="field-label" text="Purchase Price" />
+                        <TextField fx:id="purchasePriceField" prefWidth="100.0" promptText="Purchase Price" styleClass="text-field" />
+                    </children>
+                </VBox>
+                <VBox prefHeight="67.0" prefWidth="100.0">
+                    <children>
+                        <Label styleClass="field-label" text="Sale Price" />
+                        <TextField fx:id="salePriceField" prefWidth="100.0" promptText="Sale Price" styleClass="text-field" />
+                    </children>
+                </VBox>
+                <VBox>
+                    <children>
+                        <Label styleClass="field-label" text="Quantity" />
+                        <TextField fx:id="quantityField" prefWidth="80.0" promptText="Quantity" styleClass="text-field" />
+                    </children>
+                </VBox>
+                <VBox>
+                    <children>
+                        <Label styleClass="field-label" text="Date Added" />
+                        <DatePicker fx:id="dateAddedPicker" prefWidth="120.0" promptText="Date Added" />
+                    </children>
+                </VBox>
+                <VBox>
+                    <children>
+                        <Label styleClass="field-label" text="Expiry Date" />
+                        <DatePicker fx:id="expiryDatePicker" prefWidth="120.0" promptText="Expiry Date" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <TableView fx:id="productTable" prefHeight="568.0" prefWidth="936.0" styleClass="table-view">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="62.99999237060547" text="ID" />
+                <TableColumn fx:id="categoryColumn" prefWidth="102.79998779296875" text="Category" />
+                <TableColumn fx:id="nameColumn" prefWidth="111.0" text="Product Name" />
+                <TableColumn fx:id="purchasePriceColumn" prefWidth="96.0" text="Purchase Price" />
+                <TableColumn fx:id="salePriceColumn" prefWidth="100.79998779296875" text="Sale Price" />
+                <TableColumn fx:id="quantityColumn" prefWidth="117.800048828125" text="Quantity" />
+                <TableColumn fx:id="dateAddedColumn" prefWidth="102.79998779296875" text="Date Added" />
+                <TableColumn fx:id="expiryDateColumn" prefWidth="113.4000244140625" text="Expiry Date" />
+            </columns>
+        </TableView>
+        <HBox alignment="CENTER" prefHeight="73.0" prefWidth="936.0" spacing="10.0">
+         <children>
+            <Button fx:id="addProductButton" onAction="#handleAddProduct" prefHeight="32.0" prefWidth="120.0" styleClass="button-green" stylesheets="@styles.css" text="Add Product" />
+            <Button fx:id="saveButton" onAction="#handleSave" prefHeight="32.0" prefWidth="120.0" styleClass="button-blue" stylesheets="@styles.css" text="Save Changes" />
+            <Button fx:id="backButton" onAction="#handleBack" prefHeight="32.0" prefWidth="120.0" styleClass="button-red" stylesheets="@styles.css" text="Discard/Back" />
+         </children>
+        </HBox>
+    </VBox>
+</StackPane>

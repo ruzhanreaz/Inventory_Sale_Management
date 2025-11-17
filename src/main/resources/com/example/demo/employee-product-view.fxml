@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane prefHeight="800.0" prefWidth="1000.0" styleClass="main-container" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.ProductController">
+    <VBox alignment="TOP_CENTER" spacing="16.0">
+        <padding>
+            <Insets bottom="24" left="32" right="32" top="24" />
+        </padding>
+        <Label text="Employee Product List">
+            <font>
+                <Font size="20" />
+            </font>
+        </Label>
+        <HBox alignment="CENTER" prefHeight="17.0" prefWidth="391.0">
+            <children>
+                <TextField fx:id="searchField" prefHeight="25.0" prefWidth="295.0" promptText="Search by ID/Name/Category" />
+                <Button fx:id="searchButton" onAction="#handleSearch" prefHeight="25.0" prefWidth="110.0" styleClass="button-blue" stylesheets="@styles.css" text="Search" />
+            </children>
+        </HBox>
+        <TableView fx:id="productTable" prefHeight="568.0" prefWidth="936.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="80.0" text="Product ID" />
+                <TableColumn fx:id="categoryColumn" prefWidth="120.0" text="Category" />
+                <TableColumn fx:id="nameColumn" prefWidth="180.0" text="Product Name" />
+                <TableColumn fx:id="purchasePriceColumn" prefWidth="100.0" text="Purchase Price" />
+                <TableColumn fx:id="salePriceColumn" prefWidth="100.0" text="Sale Price" />
+                <TableColumn fx:id="quantityColumn" prefWidth="90.0" text="Quantity" />
+                <TableColumn fx:id="dateAddedColumn" prefWidth="132.0" text="Date Added" />
+                <TableColumn fx:id="expiryDateColumn" prefWidth="138.0" text="Expiry Date" />
+            </columns>
+        </TableView>
+        <HBox alignment="CENTER" prefHeight="73.0" prefWidth="936.0" spacing="10.0">
+         <children>
+            <Button fx:id="saveButton" onAction="#handleSave" prefHeight="32.0" prefWidth="120.0" styleClass="button-blue" stylesheets="@styles.css" text="Save Changes" />
+            <Button fx:id="backButton" onAction="#handleBack" prefHeight="32.0" prefWidth="120.0" styleClass="button-red" stylesheets="@styles.css" text="Discard/Back" />
+         </children>
+        </HBox>
+    </VBox>
+</StackPane>

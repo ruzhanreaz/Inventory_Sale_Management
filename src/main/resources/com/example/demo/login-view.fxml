@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane minHeight="800.0" minWidth="1000.0" maxHeight="800.0" maxWidth="1000.0" prefHeight="800.0" prefWidth="1000.0" styleClass="main-container" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.LoginController">
+    <VBox alignment="CENTER" maxHeight="800.0" maxWidth="1000.0" spacing="16.0" style="-fx-background-color: white; -fx-background-radius: 8; -fx-effect: dropshadow(gaussian, #b0b0b0, 10, 0, 0, 2);">
+        <padding>
+            <Insets bottom="24.0" left="32.0" right="32.0" top="24.0" />
+        </padding>
+
+        <Label alignment="CENTER" text="Login">
+            <font>
+                <Font name="Segoe UI Semibold" size="24.0" />
+            </font>
+        </Label>
+
+        <GridPane alignment="CENTER" hgap="10.0" vgap="12.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" minWidth="80.0" />
+                <ColumnConstraints halignment="LEFT" minWidth="180.0" />
+            </columnConstraints>
+
+            <children>
+                <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="emailField" promptText="Enter your email" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <PasswordField fx:id="passwordField" promptText="Enter your password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            </children>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+
+        <Label fx:id="messageLabel" textFill="#f80000" />
+
+        <Button fx:id="loginButton" onAction="#handleLogin" prefWidth="120.0" styleClass="button-blue" stylesheets="@styles.css" text="Login" />
+    </VBox>
+</StackPane>

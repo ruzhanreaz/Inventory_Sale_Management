@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane maxHeight="800.0" maxWidth="1000.0" minHeight="800.0" minWidth="1000.0" prefHeight="800.0" prefWidth="1000.0" styleClass="main-container" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.DashBoardController">
+    <children>
+        <VBox alignment="CENTER" maxHeight="800.0" maxWidth="1000.0" minHeight="800.0" minWidth="1000.0" prefHeight="800.0" prefWidth="1000.0" spacing="24.0" styleClass="content-panel">
+            <children>
+                <Label styleClass="title-label" text="Admin Dashboard" />
+
+                <Button fx:id="productViewButton" onAction="#handleProductView" prefWidth="200" styleClass="button-blue" text="Product" />
+
+                <Button fx:id="reportViewButton" onAction="#handleReportView" prefWidth="200" styleClass="button-blue" text="Report" />
+
+                <Button fx:id="userViewButton" onAction="#handleuserView" prefWidth="200" styleClass="button-blue" text="Edit User" />
+
+                <Button fx:id="logoutButton" onAction="#handlelogout" prefWidth="200" styleClass="button-red" text="Logout" />
+            </children>
+        </VBox>
+    </children>
+</StackPane>
